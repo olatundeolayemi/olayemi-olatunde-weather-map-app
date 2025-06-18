@@ -42,7 +42,7 @@ This project demonstrates advanced React development skills, API integration, an
 
 ## 🚀 Live Demo
 
-**[View Live Demo](https://your-weather-map.vercel.app)** *(Deploy to get this link)*
+**[View Live Demo](https://olatunde-olayemi-weather-app.vercel.app/)**
 
 ## 🏗️ Technology Stack
 
@@ -72,8 +72,8 @@ This project demonstrates advanced React development skills, API integration, an
 
 ### 1. Clone Repository
 \`\`\`bash
-git clone https://github.com/iyanuolayemi/weather-map-app.git
-cd weather-map-app
+git clone https://github.com/olatundeolayemi/olayemi-olatunde-weather-map-app.git
+cd olayemi-olatunde-weather-map-app
 \`\`\`
 
 ### 2. Install Dependencies
@@ -273,10 +273,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Iyanu Olayemi**  
 Full Stack Developer
 
-- **Email**: [iyanu.olayemi@example.com](mailto:iyanu.olayemi@example.com)
-- **GitHub**: [github.com/iyanuolayemi](https://github.com/iyanuolayemi)
-- **LinkedIn**: [linkedin.com/in/iyanuolayemi](https://linkedin.com/in/iyanuolayemi)
-- **Portfolio**: [iyanuolayemi.dev](https://iyanuolayemi.dev)
+- **Email**: [iyanu.olayemi@example.com](olayemiiyanu193@gmail.com)
+- **GitHub**: [github.com/iyanuolayemi](https://github.com/olatundeolayemi/)
+- **LinkedIn**: [linkedin.com/in/iyanuolayemi](http://linkedin.com/in/olatunde-olayemi)
+- **Portfolio**: [iyanuolayemi.dev](https://my-portfolio-pi-lemon-85.vercel.app/)
 
 ## 💭 Developer's Note
 
