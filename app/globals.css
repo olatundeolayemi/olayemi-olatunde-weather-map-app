@@ -1,0 +1,657 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced responsive design for all screen sizes */
+@layer base {
+  html {
+    font-size: 16px;
+  }
+
+  /* Mobile phones (320px - 480px) */
+  @media (max-width: 480px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  /* Large mobile phones and small tablets (481px - 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  /* Tablets and small laptops (769px - 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  /* Laptops and desktops (1025px - 1440px) */
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  /* Large desktops and 4K screens (1441px+) */
+  @media (min-width: 1441px) {
+    html {
+      font-size: 18px;
+    }
+  }
+}
+
+/* Leaflet CSS customizations with responsive adjustments */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 90vw;
+}
+
+@media (min-width: 768px) {
+  .leaflet-popup-content-wrapper {
+    max-width: 400px;
+  }
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+/* Custom marker styles with responsive sizing */
+.custom-leaflet-marker {
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-leaflet-marker:hover {
+  z-index: 1000 !important;
+}
+
+/* Responsive Leaflet controls */
+.leaflet-control {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.leaflet-control-zoom a {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+}
+
+@media (min-width: 768px) {
+  .leaflet-control-zoom a {
+    width: 36px;
+    height: 36px;
+    line-height: 34px;
+  }
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #f8fafc;
+}
+
+/* Responsive attribution styling */
+.leaflet-control-attribution {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 6px !important;
+  font-size: 10px !important;
+  font-weight: 500;
+  color: #374151 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  max-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .leaflet-control-attribution {
+    font-size: 11px !important;
+    max-width: none;
+  }
+}
+
+.leaflet-control-attribution a {
+  color: #374151 !important;
+  text-decoration: none !important;
+}
+
+.leaflet-control-attribution a:hover {
+  color: #1f2937 !important;
+  text-decoration: underline !important;
+}
+
+/* Enhanced responsive scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+@media (min-width: 768px) {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+}
+
+/* Enhanced glass effect for all screen sizes */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Comprehensive responsive utilities */
+@layer utilities {
+  /* Mobile-first spacing */
+  .mobile-padding {
+    padding: 0.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-padding {
+      padding: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mobile-padding {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Responsive text sizes */
+  .text-responsive-xs {
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-xs {
+      font-size: 0.875rem;
+    }
+  }
+
+  .text-responsive-sm {
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-sm {
+      font-size: 1rem;
+    }
+  }
+
+  .text-responsive-base {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-base {
+      font-size: 1.125rem;
+    }
+  }
+
+  .text-responsive-lg {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-lg {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-lg {
+      font-size: 1.5rem;
+    }
+  }
+
+  .text-responsive-xl {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-xl {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-xl {
+      font-size: 1.875rem;
+    }
+  }
+
+  /* Responsive spacing */
+  .space-responsive > * + * {
+    margin-top: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .space-responsive > * + * {
+      margin-top: 0.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .space-responsive > * + * {
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Enhanced button styles with responsive sizing */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm;
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    @apply py-2.5 px-4 text-base;
+  }
+}
+
+.btn-secondary {
+  @apply bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-3 rounded-lg transition-all duration-200 border border-gray-300 text-sm;
+}
+
+@media (min-width: 768px) {
+  .btn-secondary {
+    @apply py-2.5 px-4 text-base;
+  }
+}
+
+/* Responsive card styles */
+.card {
+  @apply bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Enhanced focus styles for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Weather icon animations with responsive sizing */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.weather-icon {
+  animation: float 3s ease-in-out infinite;
+  width: 60px;
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Responsive loading spinner */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Enhanced mobile navigation */
+.mobile-nav {
+  @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 z-50;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    @apply p-4;
+  }
+}
+
+/* Responsive shadows */
+.shadow-soft {
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-strong {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Text gradients */
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive form styles */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white text-sm;
+}
+
+@media (min-width: 768px) {
+  .form-input {
+    @apply px-4 py-3 text-base;
+  }
+}
+
+.form-input:focus {
+  @apply shadow-md;
+}
+
+/* Status indicators with responsive sizing */
+.status-online {
+  @apply w-2 h-2 bg-green-500 rounded-full animate-pulse;
+}
+
+@media (min-width: 768px) {
+  .status-online {
+    @apply w-3 h-3;
+  }
+}
+
+.status-offline {
+  @apply w-2 h-2 bg-gray-400 rounded-full;
+}
+
+@media (min-width: 768px) {
+  .status-offline {
+    @apply w-3 h-3;
+  }
+}
+
+/* Responsive typography system */
+.heading-xl {
+  @apply text-2xl font-bold tracking-tight;
+}
+
+@media (min-width: 768px) {
+  .heading-xl {
+    @apply text-3xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-xl {
+    @apply text-4xl;
+  }
+}
+
+@media (min-width: 1280px) {
+  .heading-xl {
+    @apply text-5xl;
+  }
+}
+
+.heading-lg {
+  @apply text-xl font-bold tracking-tight;
+}
+
+@media (min-width: 768px) {
+  .heading-lg {
+    @apply text-2xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-lg {
+    @apply text-3xl;
+  }
+}
+
+.heading-md {
+  @apply text-lg font-semibold tracking-tight;
+}
+
+@media (min-width: 768px) {
+  .heading-md {
+    @apply text-xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-md {
+    @apply text-2xl;
+  }
+}
+
+.text-body {
+  @apply text-gray-600 leading-relaxed text-sm;
+}
+
+@media (min-width: 768px) {
+  .text-body {
+    @apply text-base;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Leaflet responsive adjustments for all screen sizes */
+@media (max-width: 480px) {
+  .leaflet-control-zoom {
+    margin-top: 50px !important;
+    margin-right: 8px !important;
+  }
+
+  .leaflet-control-attribution {
+    margin-bottom: 8px !important;
+    margin-left: 8px !important;
+    font-size: 9px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .leaflet-control-zoom {
+    margin-top: 55px !important;
+    margin-right: 10px !important;
+  }
+
+  .leaflet-control-attribution {
+    margin-bottom: 10px !important;
+    margin-left: 10px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .leaflet-control-zoom {
+    margin-top: 15px !important;
+    margin-right: 15px !important;
+  }
+
+  .leaflet-control-attribution {
+    margin-bottom: 15px !important;
+    margin-left: 15px !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .leaflet-control-zoom {
+    margin-top: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  .leaflet-control-attribution {
+    margin-bottom: 20px !important;
+    margin-left: 20px !important;
+  }
+}
+
+/* Animation delays for staggered effects */
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Border width utilities */
+.border-3 {
+  border-width: 3px;
+}
+
+/* Enhanced Leaflet popup styling */
+.leaflet-popup-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+}
+
+/* Map tiles styling with responsive filters */
+.map-tiles {
+  filter: contrast(1.1) brightness(1.05);
+}
+
+@media (max-width: 768px) {
+  .map-tiles {
+    filter: contrast(1.05) brightness(1.02);
+  }
+}
+
+/* Responsive container utilities */
+.container-responsive {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-responsive {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-responsive {
+    max-width: 1536px;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .leaflet-control {
+    box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.15), 0 1px 3px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px -3px rgba(0, 0, 0, 0.1), 0 8px 16px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+
+  .hover\:-translate-y-1:hover {
+    transform: none;
+  }
+
+  button,
+  .cursor-pointer {
+    cursor: default;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .weather-icon {
+    animation: none;
+  }
+
+  .spinner {
+    animation: none;
+  }
+}
